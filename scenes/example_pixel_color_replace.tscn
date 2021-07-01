@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/example_pixel_color_replace.gd" type="Script" id=1]
+[ext_resource path="res://scenes/characters/character_with_color_replacement.tscn" type="PackedScene" id=2]
+
+[node name="replace_color" type="Node2D"]
+position = Vector2( 120.567, 68.2065 )
+script = ExtResource( 1 )
+
+[node name="character" parent="." instance=ExtResource( 2 )]
+
+[node name="character2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -61.6951, 23.6881 )
+new_color = Color( 0.686275, 0.576471, 0.482353, 1 )

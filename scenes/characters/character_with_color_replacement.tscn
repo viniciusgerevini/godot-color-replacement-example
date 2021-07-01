@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/char_replace.png" type="Texture" id=1]
+[ext_resource path="res://scenes/characters/replace_color.gd" type="Script" id=2]
+
+[node name="character" type="Sprite"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+new_color = Color( 0.541176, 0.345098, 0.184314, 1 )
