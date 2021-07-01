@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/characters/character_layered.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/example_layered.gd" type="Script" id=2]
+
+[node name="layered" type="Node2D"]
+position = Vector2( 120.567, 68.2065 )
+script = ExtResource( 2 )
+
+[node name="character" parent="." instance=ExtResource( 1 )]
+color = Color( 0.541176, 0.345098, 0.184314, 1 )
+
+[node name="character2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -30.9359, 8.66206 )
+color = Color( 0.686275, 0.576471, 0.482353, 1 )

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/char_layer_2.png" type="Texture" id=1]
+[ext_resource path="res://assets/char_layer_1.png" type="Texture" id=2]
+[ext_resource path="res://scenes/characters/character_layered.gd" type="Script" id=3]
+
+[node name="character" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="layer_1" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="layer_2" type="Sprite" parent="."]
+texture = ExtResource( 1 )
