@@ -1,28 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/char_replace.png" type="Texture" id=1]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-
-uniform vec4 origin:hint_color;
-uniform vec4 new:hint_color;
-
-void fragment() {
-    vec4 current_pixel = texture(TEXTURE, UV);
-
-    if (current_pixel == origin)
-        COLOR = new;
-    else
-        COLOR = current_pixel;
-}
-"
+[ext_resource path="res://scenes/characters/color_replacement.shader" type="Shader" id=2]
 
 [sub_resource type="ShaderMaterial" id=2]
 resource_local_to_scene = true
-shader = SubResource( 1 )
-shader_param/origin = Color( 0, 1, 0, 1 )
-shader_param/new = Color( 0.541176, 0.345098, 0.184314, 1 )
+shader = ExtResource( 2 )
+shader_param/old_color = Color( 0, 1, 0, 1 )
+shader_param/new_color = Color( 0.788235, 0.701961, 0.552941, 1 )
 
 [node name="character" type="Sprite"]
 material = SubResource( 2 )
